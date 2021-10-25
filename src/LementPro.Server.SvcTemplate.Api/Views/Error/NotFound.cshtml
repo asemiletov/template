@@ -1,0 +1,16 @@
+﻿@model Exception
+
+<html>
+<head>
+    <title>Page not found</title>
+</head>
+<body>
+
+<h1>Page not found: 404</h1>
+
+@if (Model != null)
+{
+    <p>@Model.Message</p>
+}
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <Authors>Lement LLC</Authors>
+    <Product>LementPro.Server</Product>
+    <Copyright>Lement LLC</Copyright>
+    <PackageTags />
+    <RepositoryType>Git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\DesignTimeDataContextFactory.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Seed\Data\BlockWork\Common.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Seed\Data\BlockWork\Common.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LementPro.Server.Common" Version="1.0.0-alpha-10" />
+    <PackageReference Include="LementPro.Server.Common.Repository" Version="1.0.0-alpha-7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.6" />
+    <PackageReference Include="LinqKit.Microsoft.EntityFrameworkCore" Version="2.0.21" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LementPro.Server.SvcTemplate.Common\LementPro.Server.SvcTemplate.Common.csproj" />
+  </ItemGroup>
+
+</Project>

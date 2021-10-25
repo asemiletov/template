@@ -1,0 +1,23 @@
+{
+  "Swagger": [
+    {
+      "Assembly": "LementPro.Server.SvcTemplate.Api",
+      "Sections": [
+        {
+          "Name": "Public",
+          "DescriptionFile": "Resources.Swagger.SvcTemplate.Api.md"
+        },
+        {
+          "Name": "Maintenance",
+          "DescriptionFile": "Resources.Swagger.SvcTemplate.Maintenance.Api.md"
+        }
+      ]
+    },
+    {
+      "Assembly": "LementPro.Server.SvcTemplate.Sdk"
+    },
+    {
+      "Assembly": "LementPro.Server.SvcTemplate.Common"
+    }
+  ]
+}
