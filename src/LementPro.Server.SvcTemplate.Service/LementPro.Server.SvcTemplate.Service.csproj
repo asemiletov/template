@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Authors>Lement LLC</Authors>
+    <Product>LementPro.Server</Product>
+    <Copyright>Lement LLC</Copyright>
+    <RepositoryType>Git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Context\Factory\AppContextFactory.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="LementPro.Server.Common.Sdk" Version="1.0.0-alpha-6" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LementPro.Server.SvcTemplate.Repository\LementPro.Server.SvcTemplate.Repository.csproj" />
+    <ProjectReference Include="..\LementPro.Server.SvcTemplate.Sdk\LementPro.Server.SvcTemplate.Sdk.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netcoreapp2.2</TargetFrameworks>
+    <Authors>Lement LLC</Authors>
+    <Product>LementPro.Server</Product>
+    <Copyright>Lement LLC</Copyright>
+    <RepositoryType>Git</RepositoryType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>LementPro.Server.SvcTemplate.Sdk.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>LementPro.Server.SvcTemplate.Sdk.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <Import Project="$(MSBuildThisFileDirectory)..\Shared.msbuild" />
+
+  <ItemGroup>
+    <PackageReference Include="LementPro.Server.Common.Sdk" Version="1.0.0-alpha-17" />
+    <PackageReference Include="System.Text.Json" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LementPro.Server.SvcTemplate.Common\LementPro.Server.SvcTemplate.Common.csproj" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>

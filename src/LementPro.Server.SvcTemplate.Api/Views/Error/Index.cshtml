@@ -1,0 +1,16 @@
+﻿@model Exception
+
+<html>
+<head>
+    <title>Internal server error</title>
+</head>
+<body>
+
+<h1>Unexpected error: 5xx</h1>
+
+@if (Model != null)
+{
+    <p>@Model.Message</p>
+}
+</body>
+</html>
