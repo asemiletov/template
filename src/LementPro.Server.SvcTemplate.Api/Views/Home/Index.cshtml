@@ -1,0 +1,8 @@
+﻿@using System.Reflection
+
+@{ var assembly =  Assembly.GetEntryAssembly()?.GetName(); }
+
+<html>
+<head><title>@assembly?.Name</title></head>
+<body><p>@assembly?.Name. Version: @assembly?.Version.<a href="/swagger">Swagger</a>.</p></body>
+</html>

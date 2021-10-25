@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Authors>Lement LLC</Authors>
+    <Product>LementPro.Server</Product>
+    <Copyright>Lement LLC</Copyright>
+    <RepositoryType>Git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LementPro.Server.Common.EntityFramework" Version="2.0.0-alpha*" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LementPro.Server.SvcTemplate.Repository\LementPro.Server.SvcTemplate.Repository.csproj" />
+    <ProjectReference Include="..\LementPro.Server.SvcTemplate.Sdk\LementPro.Server.SvcTemplate.Sdk.csproj" />
+  </ItemGroup>
+
+</Project>
